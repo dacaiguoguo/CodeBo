@@ -125,20 +125,12 @@
 				9D96498B18881C1800E5E15E /* YGViewController.h */,
 				9D96498C18881C1800E5E15E /* YGViewController.m */,
 				9D96498E18881C1800E5E15E /* Images.xcassets */,
-				9D96497D18881C1800E5E15E /* Supporting Files */,
-			);
-			path = CodeBo;
-			sourceTree = "<group>";
-		};
-		9D96497D18881C1800E5E15E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				9D96497E18881C1800E5E15E /* CodeBo-Info.plist */,
 				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
 				9D96498218881C1800E5E15E /* main.m */,
 				9D96498418881C1800E5E15E /* CodeBo-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			path = CodeBo;
 			sourceTree = "<group>";
 		};
 		9D96499B18881C1800E5E15E /* CodeBoTests */ = {
@@ -400,10 +392,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBo/CodeBo-Prefix.pch";
 				INFOPLIST_FILE = "CodeBo/CodeBo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/sunyanguo/Documents/gitplace/CodeBo/CodeBo/libWeiboSDK,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,10 +411,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBo/CodeBo-Prefix.pch";
 				INFOPLIST_FILE = "CodeBo/CodeBo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/sunyanguo/Documents/gitplace/CodeBo/CodeBo/libWeiboSDK,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
