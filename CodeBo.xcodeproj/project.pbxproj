@@ -21,6 +21,8 @@
 		9D96499818881C1800E5E15E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96497A18881C1800E5E15E /* UIKit.framework */; };
 		9D9649A018881C1800E5E15E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D96499E18881C1800E5E15E /* InfoPlist.strings */; };
 		9D9649A218881C1800E5E15E /* CodeBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9649A118881C1800E5E15E /* CodeBoTests.m */; };
+		9D9649AF18881C4300E5E15E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9649AC18881C4300E5E15E /* libWeiboSDK.a */; };
+		9D9649B018881C4300E5E15E /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		9D96499D18881C1800E5E15E /* CodeBoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeBoTests-Info.plist"; sourceTree = "<group>"; };
 		9D96499F18881C1800E5E15E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D9649A118881C1800E5E15E /* CodeBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeBoTests.m; sourceTree = "<group>"; };
+		9D9649AC18881C4300E5E15E /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		9D9649AE18881C4300E5E15E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 				9D96497918881C1800E5E15E /* CoreGraphics.framework in Frameworks */,
 				9D96497B18881C1800E5E15E /* UIKit.framework in Frameworks */,
 				9D96497718881C1800E5E15E /* Foundation.framework in Frameworks */,
+				9D9649AF18881C4300E5E15E /* libWeiboSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +118,7 @@
 		9D96497C18881C1800E5E15E /* CodeBo */ = {
 			isa = PBXGroup;
 			children = (
+				9D9649AB18881C4300E5E15E /* libWeiboSDK */,
 				9D96498518881C1800E5E15E /* YGAppDelegate.h */,
 				9D96498618881C1800E5E15E /* YGAppDelegate.m */,
 				9D96498818881C1800E5E15E /* Main.storyboard */,
@@ -150,6 +157,16 @@
 				9D96499E18881C1800E5E15E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D9649AB18881C4300E5E15E /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				9D9649AC18881C4300E5E15E /* libWeiboSDK.a */,
+				9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */,
+				9D9649AE18881C4300E5E15E /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,7 @@
 				9D96498F18881C1800E5E15E /* Images.xcassets in Resources */,
 				9D96498118881C1800E5E15E /* InfoPlist.strings in Resources */,
 				9D96498A18881C1800E5E15E /* Main.storyboard in Resources */,
+				9D9649B018881C4300E5E15E /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +400,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBo/CodeBo-Prefix.pch";
 				INFOPLIST_FILE = "CodeBo/CodeBo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sunyanguo/Documents/gitplace/CodeBo/CodeBo/libWeiboSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +417,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBo/CodeBo-Prefix.pch";
 				INFOPLIST_FILE = "CodeBo/CodeBo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sunyanguo/Documents/gitplace/CodeBo/CodeBo/libWeiboSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
