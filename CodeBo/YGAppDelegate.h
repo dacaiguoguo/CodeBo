@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YGAppDelegate : UIResponder <UIApplicationDelegate>
+@interface YGAppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
