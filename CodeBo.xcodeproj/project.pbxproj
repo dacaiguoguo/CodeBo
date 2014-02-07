@@ -395,7 +395,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/sunyanguo/Documents/gitplace/CodeBo/CodeBo/libWeiboSDK,
+					"$(SRCROOT)/CodeBo/libWeiboSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,7 +414,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/sunyanguo/Documents/gitplace/CodeBo/CodeBo/libWeiboSDK,
+					"$(SRCROOT)/CodeBo/libWeiboSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,6 +483,7 @@
 				9D9649A718881C1800E5E15E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D9649A818881C1800E5E15E /* Build configuration list for PBXNativeTarget "CodeBoTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +492,7 @@
 				9D9649AA18881C1800E5E15E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
