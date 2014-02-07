@@ -50,6 +50,14 @@
 }
 
 #pragma mark WeiboSDK Delegate
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{
+    if ([request isKindOfClass:WBProvideMessageForWeiboRequest.class])
+    {
+        LVLog(@"dacaiguoguo:\n%s\n%@",__func__,nil);
+    }
+}
+
 /*
 - (void)didReceiveWeiboRequest:(WBBaseRequest *)request
 {

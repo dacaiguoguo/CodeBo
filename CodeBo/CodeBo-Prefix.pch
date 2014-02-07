@@ -16,4 +16,13 @@
     #import "WeiboSDK.h"
     #define kAppKey         @"2230348788"
     #define kRedirectURI    @"https://api.weibo.com/oauth2/default.html"
+
+    #pragma mark -
+    #pragma mark ---- 常用宏 ----
+
+    #ifdef DEBUG
+    #define LVLog(format, ...) NSLog(format, ## __VA_ARGS__)
+    #else
+    #define LVLog(format, ...) //NSLog(format, ## __VA_ARGS__)
+    #endif
 #endif
