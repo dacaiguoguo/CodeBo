@@ -19,10 +19,9 @@
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"wbtoken": self.wbtoken}];
-    self.weiboNetworkEngine = [[MKNetworkEngine alloc] initWithHostName:@"api.weibo.com"];
+    self.weiboNetworkEngine = [[MKNetworkEngine alloc] initWithHostName:@"api.weibo.com" apiPath:@"2/statuses" customHeaderFields:nil];
     [self.weiboNetworkEngine useCache];
-    
-    MKNetworkOperation *op =  [self.weiboNetworkEngine operationWithPath:@"2/statuses/friends_timeline.json" params:@{@"access_token": self.wbtoken} httpMethod:@"GET" ssl:YES];
+    MKNetworkOperation *op =  [self.weiboNetworkEngine operationWithPath:@"friends_timeline.json" params:@{@"access_token": self.wbtoken} httpMethod:@"GET" ssl:YES];
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         LVLog(@"dacaiguoguo:\n%s\n%@",__func__,completedOperation.responseString);
 
@@ -30,12 +29,6 @@
         
     }];
     [self.weiboNetworkEngine enqueueOperation:op];
-    
-    
-//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.weibo.com/2/statuses/friends_timeline.json?access_token=%@",self.wbtoken]];
-//    NSData *data = [NSData dataWithContentsOfURL:url];
-//    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//    LVLog(@"dacaiguoguo:\n%s\n%@",__func__,s);
     return YES;
 }
 
