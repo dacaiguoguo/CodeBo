@@ -7,16 +7,67 @@
 //
 
 #import "YGAppDelegate.h"
+#import "Reachability.h"
 
 @implementation YGAppDelegate
-
+-(void)newtworkType {
+    
+    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"] valueForKey:@"foregroundView"]subviews];
+    NSNumber *dataNetworkItemView = nil;
+    
+    for (id subview in subviews) {
+        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
+            dataNetworkItemView = subview;
+            break;
+        }
+    }
+    
+    
+    switch ([[dataNetworkItemView valueForKey:@"dataNetworkType"]integerValue]) {
+        case 0:
+            NSLog(@"No wifi or cellular");
+            break;
+            
+        case 1:
+            NSLog(@"2G");
+            break;
+            
+        case 2:
+            NSLog(@"3G");
+            break;
+            
+        case 3:
+            NSLog(@"4G");
+            break;
+            
+        case 4:
+            NSLog(@"LTE");
+            break;
+            
+        case 5:
+            NSLog(@"Wifi");
+            break;
+            
+            
+        default:
+            break;
+    }
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
+    [self newtworkType];
+    self.wbtoken = @"2.00zg7wFCYb_w7C2ef95203f3MLznRB";
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"wbtoken": self.wbtoken}];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.weibo.com/2/statuses/friends_timeline.json?access_token=%@",self.wbtoken]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    LVLog(@"dacaiguoguo:\n%s\n%@",__func__,s);
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -58,45 +109,36 @@
     }
 }
 
-/*
-- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
-{
-    if ([request isKindOfClass:WBProvideMessageForWeiboRequest.class])
-    {
-        ProvideMessageForWeiboViewController *controller = [[[ProvideMessageForWeiboViewController alloc] init] autorelease];
-        [self.viewController presentModalViewController:controller animated:YES];
-    }
-}
-
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
     if ([response isKindOfClass:WBSendMessageToWeiboResponse.class])
     {
-        NSString *title = @"发送结果";
         NSString *message = [NSString stringWithFormat:@"响应状态: %d\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",(int)response.statusCode, response.userInfo, response.requestUserInfo];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
+        LVLog(@"dacaiguoguo:\n%s\n发送结果：%@",__func__,message);
+
     }
     else if ([response isKindOfClass:WBAuthorizeResponse.class])
     {
-        NSString *title = @"认证结果";
         NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",(int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-        
+        LVLog(@"dacaiguoguo:\n%s\n认证结果：%@",__func__,message);
         self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
-        
-        [alert show];
-        [alert release];
+
+
     }
 }
-*/
+
+- (void)requestData{
+    
+}
+
+
+
+
+
+
+
+
 @end
+
+
+

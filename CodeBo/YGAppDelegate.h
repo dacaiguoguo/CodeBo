@@ -11,5 +11,6 @@
 @interface YGAppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSString *wbtoken;
 
 @end
