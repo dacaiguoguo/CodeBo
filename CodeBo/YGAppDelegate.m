@@ -10,61 +10,32 @@
 #import "Reachability.h"
 
 @implementation YGAppDelegate
--(void)newtworkType {
-    
-    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"] valueForKey:@"foregroundView"]subviews];
-    NSNumber *dataNetworkItemView = nil;
-    
-    for (id subview in subviews) {
-        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
-            dataNetworkItemView = subview;
-            break;
-        }
-    }
-    
-    
-    switch ([[dataNetworkItemView valueForKey:@"dataNetworkType"]integerValue]) {
-        case 0:
-            NSLog(@"No wifi or cellular");
-            break;
-            
-        case 1:
-            NSLog(@"2G");
-            break;
-            
-        case 2:
-            NSLog(@"3G");
-            break;
-            
-        case 3:
-            NSLog(@"4G");
-            break;
-            
-        case 4:
-            NSLog(@"LTE");
-            break;
-            
-        case 5:
-            NSLog(@"Wifi");
-            break;
-            
-            
-        default:
-            break;
-    }
-}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:kAppKey];
     [self newtworkType];
     self.wbtoken = @"2.00zg7wFCYb_w7C2ef95203f3MLznRB";
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kAppKey];
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"wbtoken": self.wbtoken}];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.weibo.com/2/statuses/friends_timeline.json?access_token=%@",self.wbtoken]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    LVLog(@"dacaiguoguo:\n%s\n%@",__func__,s);
+    self.weiboNetworkEngine = [[MKNetworkEngine alloc] initWithHostName:@"api.weibo.com"];
+    [self.weiboNetworkEngine useCache];
+    
+    MKNetworkOperation *op =  [self.weiboNetworkEngine operationWithPath:@"2/statuses/friends_timeline.json" params:@{@"access_token": self.wbtoken} httpMethod:@"GET" ssl:YES];
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        LVLog(@"dacaiguoguo:\n%s\n%@",__func__,completedOperation.responseString);
+
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        
+    }];
+    [self.weiboNetworkEngine enqueueOperation:op];
+    
+    
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.weibo.com/2/statuses/friends_timeline.json?access_token=%@",self.wbtoken]];
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+//    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    LVLog(@"dacaiguoguo:\n%s\n%@",__func__,s);
     return YES;
 }
 
@@ -132,7 +103,49 @@
 }
 
 
-
+-(void)newtworkType {
+    
+    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"] valueForKey:@"foregroundView"]subviews];
+    NSNumber *dataNetworkItemView = nil;
+    
+    for (id subview in subviews) {
+        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
+            dataNetworkItemView = subview;
+            break;
+        }
+    }
+    
+    
+    switch ([[dataNetworkItemView valueForKey:@"dataNetworkType"]integerValue]) {
+        case 0:
+            NSLog(@"No wifi or cellular");
+            break;
+            
+        case 1:
+            NSLog(@"2G");
+            break;
+            
+        case 2:
+            NSLog(@"3G");
+            break;
+            
+        case 3:
+            NSLog(@"4G");
+            break;
+            
+        case 4:
+            NSLog(@"LTE");
+            break;
+            
+        case 5:
+            NSLog(@"Wifi");
+            break;
+            
+            
+        default:
+            break;
+    }
+}
 
 
 

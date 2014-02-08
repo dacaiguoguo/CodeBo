@@ -171,6 +171,7 @@
 				9D96498E18881C1800E5E15E /* Images.xcassets */,
 				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
 				9D96498218881C1800E5E15E /* main.m */,
+				A8F7653618A63114006F2BFA /* WeiBoRequest */,
 				9D96498818881C1800E5E15E /* Main.storyboard */,
 				9D9649AB18881C4300E5E15E /* libWeiboSDK */,
 				A8F7651E18A62703006F2BFA /* MKNetworkKit */,
@@ -249,6 +250,13 @@
 				A8F7653418A6284A006F2BFA /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		A8F7653618A63114006F2BFA /* WeiBoRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WeiBoRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

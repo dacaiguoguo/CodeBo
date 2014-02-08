@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface YGAppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *wbtoken;
-
+@property (strong, nonatomic) MKNetworkEngine *weiboNetworkEngine;
 @end

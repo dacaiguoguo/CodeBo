@@ -50,7 +50,7 @@
 @property (nonatomic, strong) NSMutableDictionary *memoryCache;
 @property (nonatomic, strong) NSMutableArray *memoryCacheKeys;
 @property (nonatomic, strong) NSMutableDictionary *cacheInvalidationParams;
-@property (assign, nonatomic) dispatch_queue_t backgroundCacheQueue;
+@property (strong, nonatomic) dispatch_queue_t backgroundCacheQueue;
 
 -(void) saveCache;
 -(void) saveCacheData:(NSData*) data forKey:(NSString*) cacheDataKey;
