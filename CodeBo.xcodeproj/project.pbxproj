@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D6A95D318A7284000CCF703 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95D218A7284000CCF703 /* Reachability.m */; };
+		9D6A95DD18A7745000CCF703 /* KZPropertyDescriptor+Validators.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95D618A7745000CCF703 /* KZPropertyDescriptor+Validators.m */; };
+		9D6A95DE18A7745000CCF703 /* KZPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95D818A7745000CCF703 /* KZPropertyDescriptor.m */; };
+		9D6A95DF18A7745000CCF703 /* KZPropertyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95DA18A7745000CCF703 /* KZPropertyMapper.m */; };
+		9D6A95E018A7745000CCF703 /* KZPropertyMapperCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95DC18A7745000CCF703 /* KZPropertyMapperCommon.m */; };
+		9D6A95E318A775A800CCF703 /* YGWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95E218A775A800CCF703 /* YGWeibo.m */; };
 		9D96497718881C1800E5E15E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96497618881C1800E5E15E /* Foundation.framework */; };
 		9D96497918881C1800E5E15E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96497818881C1800E5E15E /* CoreGraphics.framework */; };
 		9D96497B18881C1800E5E15E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96497A18881C1800E5E15E /* UIKit.framework */; };
@@ -24,19 +30,10 @@
 		9D9649AF18881C4300E5E15E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9649AC18881C4300E5E15E /* libWeiboSDK.a */; };
 		9D9649B018881C4300E5E15E /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */; };
 		A8F764FC18A61F3E006F2BFA /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = A8F764FB18A61F3E006F2BFA /* readme.md */; };
-		A8F7651118A62652006F2BFA /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7650D18A62652006F2BFA /* MKNetworkEngine.m */; };
-		A8F7651218A62652006F2BFA /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7651018A62652006F2BFA /* MKNetworkOperation.m */; };
 		A8F7651718A626B3006F2BFA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7651618A626B3006F2BFA /* CFNetwork.framework */; };
 		A8F7651918A626C3006F2BFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7651818A626C3006F2BFA /* SystemConfiguration.framework */; };
 		A8F7651B18A626CD006F2BFA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7651A18A626CD006F2BFA /* Security.framework */; };
 		A8F7651D18A626D5006F2BFA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7651C18A626D5006F2BFA /* ImageIO.framework */; };
-		A8F7652C18A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7652118A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.m */; };
-		A8F7652D18A62819006F2BFA /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7652318A62819006F2BFA /* NSData+Base64.m */; };
-		A8F7652E18A62819006F2BFA /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7652518A62819006F2BFA /* NSDate+RFC1123.m */; };
-		A8F7652F18A62819006F2BFA /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7652718A62819006F2BFA /* NSDictionary+RequestEncoding.m */; };
-		A8F7653018A62819006F2BFA /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7652918A62819006F2BFA /* NSString+MKNetworkKitAdditions.m */; };
-		A8F7653118A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7652B18A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.m */; };
-		A8F7653518A6284A006F2BFA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F7653418A6284A006F2BFA /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D6A95D118A7284000CCF703 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		9D6A95D218A7284000CCF703 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		9D6A95D518A7745000CCF703 /* KZPropertyDescriptor+Validators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KZPropertyDescriptor+Validators.h"; sourceTree = "<group>"; };
+		9D6A95D618A7745000CCF703 /* KZPropertyDescriptor+Validators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KZPropertyDescriptor+Validators.m"; sourceTree = "<group>"; };
+		9D6A95D718A7745000CCF703 /* KZPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPropertyDescriptor.h; sourceTree = "<group>"; };
+		9D6A95D818A7745000CCF703 /* KZPropertyDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZPropertyDescriptor.m; sourceTree = "<group>"; };
+		9D6A95D918A7745000CCF703 /* KZPropertyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPropertyMapper.h; sourceTree = "<group>"; };
+		9D6A95DA18A7745000CCF703 /* KZPropertyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZPropertyMapper.m; sourceTree = "<group>"; };
+		9D6A95DB18A7745000CCF703 /* KZPropertyMapperCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPropertyMapperCommon.h; sourceTree = "<group>"; };
+		9D6A95DC18A7745000CCF703 /* KZPropertyMapperCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZPropertyMapperCommon.m; sourceTree = "<group>"; };
+		9D6A95E118A775A800CCF703 /* YGWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGWeibo.h; sourceTree = "<group>"; };
+		9D6A95E218A775A800CCF703 /* YGWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGWeibo.m; sourceTree = "<group>"; };
 		9D96497318881C1800E5E15E /* CodeBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D96497618881C1800E5E15E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D96497818881C1800E5E15E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,29 +82,10 @@
 		9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		9D9649AE18881C4300E5E15E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		A8F764FB18A61F3E006F2BFA /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
-		A8F7650C18A62652006F2BFA /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
-		A8F7650D18A62652006F2BFA /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
-		A8F7650E18A62652006F2BFA /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
-		A8F7650F18A62652006F2BFA /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
-		A8F7651018A62652006F2BFA /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
 		A8F7651618A626B3006F2BFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A8F7651818A626C3006F2BFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A8F7651A18A626CD006F2BFA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A8F7651C18A626D5006F2BFA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		A8F7652018A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		A8F7652118A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		A8F7652218A62819006F2BFA /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		A8F7652318A62819006F2BFA /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		A8F7652418A62819006F2BFA /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
-		A8F7652518A62819006F2BFA /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
-		A8F7652618A62819006F2BFA /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
-		A8F7652718A62819006F2BFA /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
-		A8F7652818A62819006F2BFA /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		A8F7652918A62819006F2BFA /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		A8F7652A18A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		A8F7652B18A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		A8F7653318A6284A006F2BFA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		A8F7653418A6284A006F2BFA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +117,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D6A95D018A7284000CCF703 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				9D6A95D118A7284000CCF703 /* Reachability.h */,
+				9D6A95D218A7284000CCF703 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		9D6A95D418A7745000CCF703 /* KZPropertyMapper */ = {
+			isa = PBXGroup;
+			children = (
+				9D6A95D518A7745000CCF703 /* KZPropertyDescriptor+Validators.h */,
+				9D6A95D618A7745000CCF703 /* KZPropertyDescriptor+Validators.m */,
+				9D6A95D718A7745000CCF703 /* KZPropertyDescriptor.h */,
+				9D6A95D818A7745000CCF703 /* KZPropertyDescriptor.m */,
+				9D6A95D918A7745000CCF703 /* KZPropertyMapper.h */,
+				9D6A95DA18A7745000CCF703 /* KZPropertyMapper.m */,
+				9D6A95DB18A7745000CCF703 /* KZPropertyMapperCommon.h */,
+				9D6A95DC18A7745000CCF703 /* KZPropertyMapperCommon.m */,
+			);
+			path = KZPropertyMapper;
+			sourceTree = "<group>";
+		};
 		9D96496A18881C1800E5E15E = {
 			isa = PBXGroup;
 			children = (
@@ -166,14 +180,17 @@
 			children = (
 				9D96498518881C1800E5E15E /* YGAppDelegate.h */,
 				9D96498618881C1800E5E15E /* YGAppDelegate.m */,
+				9D6A95E118A775A800CCF703 /* YGWeibo.h */,
+				9D6A95E218A775A800CCF703 /* YGWeibo.m */,
 				9D96497E18881C1800E5E15E /* CodeBo-Info.plist */,
 				9D96498418881C1800E5E15E /* CodeBo-Prefix.pch */,
 				9D96498E18881C1800E5E15E /* Images.xcassets */,
 				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
 				9D96498218881C1800E5E15E /* main.m */,
 				9D96498818881C1800E5E15E /* Main.storyboard */,
+				9D6A95D418A7745000CCF703 /* KZPropertyMapper */,
+				9D6A95D018A7284000CCF703 /* Reachability */,
 				9D9649AB18881C4300E5E15E /* libWeiboSDK */,
-				A8F7651E18A62703006F2BFA /* MKNetworkKit */,
 				A8F764FB18A61F3E006F2BFA /* readme.md */,
 				9D96498B18881C1800E5E15E /* YGViewController.h */,
 				9D96498C18881C1800E5E15E /* YGViewController.m */,
@@ -207,48 +224,6 @@
 				9D9649AE18881C4300E5E15E /* WeiboSDK.h */,
 			);
 			path = libWeiboSDK;
-			sourceTree = "<group>";
-		};
-		A8F7651E18A62703006F2BFA /* MKNetworkKit */ = {
-			isa = PBXGroup;
-			children = (
-				A8F7651F18A62819006F2BFA /* Categories */,
-				A8F7650C18A62652006F2BFA /* MKNetworkEngine.h */,
-				A8F7650D18A62652006F2BFA /* MKNetworkEngine.m */,
-				A8F7650E18A62652006F2BFA /* MKNetworkKit.h */,
-				A8F7650F18A62652006F2BFA /* MKNetworkOperation.h */,
-				A8F7651018A62652006F2BFA /* MKNetworkOperation.m */,
-				A8F7653218A6284A006F2BFA /* Reachability */,
-			);
-			name = MKNetworkKit;
-			sourceTree = "<group>";
-		};
-		A8F7651F18A62819006F2BFA /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				A8F7652018A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.h */,
-				A8F7652118A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.m */,
-				A8F7652218A62819006F2BFA /* NSData+Base64.h */,
-				A8F7652318A62819006F2BFA /* NSData+Base64.m */,
-				A8F7652418A62819006F2BFA /* NSDate+RFC1123.h */,
-				A8F7652518A62819006F2BFA /* NSDate+RFC1123.m */,
-				A8F7652618A62819006F2BFA /* NSDictionary+RequestEncoding.h */,
-				A8F7652718A62819006F2BFA /* NSDictionary+RequestEncoding.m */,
-				A8F7652818A62819006F2BFA /* NSString+MKNetworkKitAdditions.h */,
-				A8F7652918A62819006F2BFA /* NSString+MKNetworkKitAdditions.m */,
-				A8F7652A18A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.h */,
-				A8F7652B18A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		A8F7653218A6284A006F2BFA /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				A8F7653318A6284A006F2BFA /* Reachability.h */,
-				A8F7653418A6284A006F2BFA /* Reachability.m */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,18 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6A95DE18A7745000CCF703 /* KZPropertyDescriptor.m in Sources */,
 				9D96498718881C1800E5E15E /* YGAppDelegate.m in Sources */,
-				A8F7652F18A62819006F2BFA /* NSDictionary+RequestEncoding.m in Sources */,
-				A8F7653118A62819006F2BFA /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				9D96498D18881C1800E5E15E /* YGViewController.m in Sources */,
-				A8F7651218A62652006F2BFA /* MKNetworkOperation.m in Sources */,
-				A8F7652D18A62819006F2BFA /* NSData+Base64.m in Sources */,
-				A8F7652C18A62819006F2BFA /* NSAlert+MKNetworkKitAdditions.m in Sources */,
-				A8F7651118A62652006F2BFA /* MKNetworkEngine.m in Sources */,
+				9D6A95E018A7745000CCF703 /* KZPropertyMapperCommon.m in Sources */,
+				9D6A95D318A7284000CCF703 /* Reachability.m in Sources */,
+				9D6A95E318A775A800CCF703 /* YGWeibo.m in Sources */,
+				9D6A95DD18A7745000CCF703 /* KZPropertyDescriptor+Validators.m in Sources */,
 				9D96498318881C1800E5E15E /* main.m in Sources */,
-				A8F7653018A62819006F2BFA /* NSString+MKNetworkKitAdditions.m in Sources */,
-				A8F7653518A6284A006F2BFA /* Reachability.m in Sources */,
-				A8F7652E18A62819006F2BFA /* NSDate+RFC1123.m in Sources */,
+				9D6A95DF18A7745000CCF703 /* KZPropertyMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +464,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBo/CodeBo-Prefix.pch";
 				INFOPLIST_FILE = "CodeBo/CodeBo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/CodeBo/libWeiboSDK",
@@ -511,7 +483,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBo/CodeBo-Prefix.pch";
 				INFOPLIST_FILE = "CodeBo/CodeBo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/CodeBo/libWeiboSDK",
