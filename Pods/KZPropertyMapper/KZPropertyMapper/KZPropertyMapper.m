@@ -58,7 +58,7 @@
   [sourceArray enumerateObjectsUsingBlock:^(id value, NSUInteger idx, BOOL *stop) {
     NSNumber *key = @(idx);
     id subMapping = [parameterMapping objectForKey:key];
-    [self mapValue:value toInstance:instance usingMapping:subMapping sourcePropertyName:[NSString stringWithFormat:@"Index %ld", (long)key.integerValue]];
+    [self mapValue:value toInstance:instance usingMapping:subMapping sourcePropertyName:[NSString stringWithFormat:@"Index %d", key.integerValue]];
   }];
   return YES;
 }
@@ -133,7 +133,6 @@
     AssertTrueOrReturnNoBlock([self respondsToSelector:mappingSelector], ^(NSError *error) {
     });
     id (*objc_msgSendTyped)(id, SEL, id, id, NSArray *) = (void *)objc_msgSend;
-    boxingParameters = [boxingParameters arrayByAddingObject:targetProperty];
     boxedValue = objc_msgSendTyped(self, mappingSelector, instance, value, boxingParameters);
   } else {
     SEL mappingSelector = NSSelectorFromString([NSString stringWithFormat:@"boxValueAs%@:", mappingType]);
@@ -166,11 +165,10 @@
   Class coreDataBaseClass = NSClassFromString(@"NSManagedObject");
   if (coreDataBaseClass != nil && [instance isKindOfClass:coreDataBaseClass]) {
     [instance willChangeValueForKey:mapping];
-    void (*objc_msgSendTyped)(id, SEL, id, NSString*) = (void *)objc_msgSend;
-    objc_msgSendTyped(instance, NSSelectorFromString(@"setPrimitiveValue:forKey:"), value, mapping);
+    objc_msgSend(instance, NSSelectorFromString(@"setPrimitiveValue:forKey:"), value, mapping);
     [instance didChangeValueForKey:mapping];
   } else {
-    [instance setValue:value forKeyPath:mapping];
+    [instance setValue:value forKey:mapping];
   }
 }
 
@@ -290,17 +288,10 @@ static BOOL _shouldLogIgnoredValues = YES;
 
 + (id)boxValueAsSelectorOnTarget:(id)target value:(id)value params:(NSArray *)params __unused
 {
-  AssertTrueOrReturnNil(params.count == 2);
-  NSString *selectorName = [params objectAtIndex:0];
-  NSString *targetPropertyName = [params objectAtIndex:1];
-  NSArray *selectorComponents = [selectorName componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@":"]];
-  SEL selector = NSSelectorFromString(selectorName);
-  
+  AssertTrueOrReturnNil(params.count == 1);
+  SEL selector = NSSelectorFromString([params objectAtIndex:0]);
+
   AssertTrueOrReturnNil([target respondsToSelector:selector]);
-  if(selectorComponents.count > 2){
-    id (*objc_msgSendTyped)(id, SEL, id, NSString*) = (void *)objc_msgSend;
-    return objc_msgSendTyped(target, selector, value, targetPropertyName);
-  }
   id (*objc_msgSendTyped)(id, SEL, id) = (void *)objc_msgSend;
   return objc_msgSendTyped(target, selector, value);
 }

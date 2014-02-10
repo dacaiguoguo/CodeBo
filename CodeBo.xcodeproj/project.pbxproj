@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33FC28137E7D45EBA584B4E6 /* libPods-CodeBo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D2AE1FAF514E11B4FD3165 /* libPods-CodeBo.a */; };
 		9D6A95D318A7284000CCF703 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95D218A7284000CCF703 /* Reachability.m */; };
-		9D6A95DD18A7745000CCF703 /* KZPropertyDescriptor+Validators.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95D618A7745000CCF703 /* KZPropertyDescriptor+Validators.m */; };
-		9D6A95DE18A7745000CCF703 /* KZPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95D818A7745000CCF703 /* KZPropertyDescriptor.m */; };
-		9D6A95DF18A7745000CCF703 /* KZPropertyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95DA18A7745000CCF703 /* KZPropertyMapper.m */; };
-		9D6A95E018A7745000CCF703 /* KZPropertyMapperCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95DC18A7745000CCF703 /* KZPropertyMapperCommon.m */; };
 		9D6A95E318A775A800CCF703 /* YGWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A95E218A775A800CCF703 /* YGWeibo.m */; };
 		9D96497718881C1800E5E15E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96497618881C1800E5E15E /* Foundation.framework */; };
 		9D96497918881C1800E5E15E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96497818881C1800E5E15E /* CoreGraphics.framework */; };
@@ -47,16 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12796382EAE5434E88DDD907 /* Pods-CodeBo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBo.xcconfig"; path = "Pods/Pods-CodeBo.xcconfig"; sourceTree = "<group>"; };
 		9D6A95D118A7284000CCF703 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		9D6A95D218A7284000CCF703 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		9D6A95D518A7745000CCF703 /* KZPropertyDescriptor+Validators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KZPropertyDescriptor+Validators.h"; sourceTree = "<group>"; };
-		9D6A95D618A7745000CCF703 /* KZPropertyDescriptor+Validators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KZPropertyDescriptor+Validators.m"; sourceTree = "<group>"; };
-		9D6A95D718A7745000CCF703 /* KZPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPropertyDescriptor.h; sourceTree = "<group>"; };
-		9D6A95D818A7745000CCF703 /* KZPropertyDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZPropertyDescriptor.m; sourceTree = "<group>"; };
-		9D6A95D918A7745000CCF703 /* KZPropertyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPropertyMapper.h; sourceTree = "<group>"; };
-		9D6A95DA18A7745000CCF703 /* KZPropertyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZPropertyMapper.m; sourceTree = "<group>"; };
-		9D6A95DB18A7745000CCF703 /* KZPropertyMapperCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPropertyMapperCommon.h; sourceTree = "<group>"; };
-		9D6A95DC18A7745000CCF703 /* KZPropertyMapperCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZPropertyMapperCommon.m; sourceTree = "<group>"; };
 		9D6A95E118A775A800CCF703 /* YGWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGWeibo.h; sourceTree = "<group>"; };
 		9D6A95E218A775A800CCF703 /* YGWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGWeibo.m; sourceTree = "<group>"; };
 		9D96497318881C1800E5E15E /* CodeBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +71,7 @@
 		9D9649AC18881C4300E5E15E /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		9D9649AE18881C4300E5E15E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		A3D2AE1FAF514E11B4FD3165 /* libPods-CodeBo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F764FB18A61F3E006F2BFA /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		A8F7651618A626B3006F2BFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A8F7651818A626C3006F2BFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -101,6 +92,7 @@
 				9D96497B18881C1800E5E15E /* UIKit.framework in Frameworks */,
 				9D96497718881C1800E5E15E /* Foundation.framework in Frameworks */,
 				9D9649AF18881C4300E5E15E /* libWeiboSDK.a in Frameworks */,
+				33FC28137E7D45EBA584B4E6 /* libPods-CodeBo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,21 +118,6 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		9D6A95D418A7745000CCF703 /* KZPropertyMapper */ = {
-			isa = PBXGroup;
-			children = (
-				9D6A95D518A7745000CCF703 /* KZPropertyDescriptor+Validators.h */,
-				9D6A95D618A7745000CCF703 /* KZPropertyDescriptor+Validators.m */,
-				9D6A95D718A7745000CCF703 /* KZPropertyDescriptor.h */,
-				9D6A95D818A7745000CCF703 /* KZPropertyDescriptor.m */,
-				9D6A95D918A7745000CCF703 /* KZPropertyMapper.h */,
-				9D6A95DA18A7745000CCF703 /* KZPropertyMapper.m */,
-				9D6A95DB18A7745000CCF703 /* KZPropertyMapperCommon.h */,
-				9D6A95DC18A7745000CCF703 /* KZPropertyMapperCommon.m */,
-			);
-			path = KZPropertyMapper;
-			sourceTree = "<group>";
-		};
 		9D96496A18881C1800E5E15E = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +125,7 @@
 				9D96499B18881C1800E5E15E /* CodeBoTests */,
 				9D96497518881C1800E5E15E /* Frameworks */,
 				9D96497418881C1800E5E15E /* Products */,
+				12796382EAE5434E88DDD907 /* Pods-CodeBo.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +149,7 @@
 				9D96497818881C1800E5E15E /* CoreGraphics.framework */,
 				9D96497A18881C1800E5E15E /* UIKit.framework */,
 				9D96499518881C1800E5E15E /* XCTest.framework */,
+				A3D2AE1FAF514E11B4FD3165 /* libPods-CodeBo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,7 +167,6 @@
 				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
 				9D96498218881C1800E5E15E /* main.m */,
 				9D96498818881C1800E5E15E /* Main.storyboard */,
-				9D6A95D418A7745000CCF703 /* KZPropertyMapper */,
 				9D6A95D018A7284000CCF703 /* Reachability */,
 				9D9649AB18881C4300E5E15E /* libWeiboSDK */,
 				A8F764FB18A61F3E006F2BFA /* readme.md */,
@@ -233,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D9649A518881C1800E5E15E /* Build configuration list for PBXNativeTarget "CodeBo" */;
 			buildPhases = (
+				D548AF0D46A54F2CA9A9BC89 /* Check Pods Manifest.lock */,
 				9D96496F18881C1800E5E15E /* Sources */,
 				9D96497018881C1800E5E15E /* Frameworks */,
 				9D96497118881C1800E5E15E /* Resources */,
+				FE647801CCAC45F1A16AEE45 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,20 +301,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D548AF0D46A54F2CA9A9BC89 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE647801CCAC45F1A16AEE45 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CodeBo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D96496F18881C1800E5E15E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D6A95DE18A7745000CCF703 /* KZPropertyDescriptor.m in Sources */,
 				9D96498718881C1800E5E15E /* YGAppDelegate.m in Sources */,
 				9D96498D18881C1800E5E15E /* YGViewController.m in Sources */,
-				9D6A95E018A7745000CCF703 /* KZPropertyMapperCommon.m in Sources */,
 				9D6A95D318A7284000CCF703 /* Reachability.m in Sources */,
 				9D6A95E318A775A800CCF703 /* YGWeibo.m in Sources */,
-				9D6A95DD18A7745000CCF703 /* KZPropertyDescriptor+Validators.m in Sources */,
 				9D96498318881C1800E5E15E /* main.m in Sources */,
-				9D6A95DF18A7745000CCF703 /* KZPropertyMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +467,7 @@
 		};
 		9D9649A618881C1800E5E15E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12796382EAE5434E88DDD907 /* Pods-CodeBo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -477,6 +487,7 @@
 		};
 		9D9649A718881C1800E5E15E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12796382EAE5434E88DDD907 /* Pods-CodeBo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
