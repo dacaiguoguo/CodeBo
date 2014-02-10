@@ -26,6 +26,7 @@
 		9D9649A218881C1800E5E15E /* CodeBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9649A118881C1800E5E15E /* CodeBoTests.m */; };
 		9D9649AF18881C4300E5E15E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9649AC18881C4300E5E15E /* libWeiboSDK.a */; };
 		9D9649B018881C4300E5E15E /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */; };
+		A81F052418A8E5FC00300AA7 /* YGPropertyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A81F052318A8E5FC00300AA7 /* YGPropertyMapper.m */; };
 		A8F764FC18A61F3E006F2BFA /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = A8F764FB18A61F3E006F2BFA /* readme.md */; };
 		A8F7651718A626B3006F2BFA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7651618A626B3006F2BFA /* CFNetwork.framework */; };
 		A8F7651918A626C3006F2BFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F7651818A626C3006F2BFA /* SystemConfiguration.framework */; };
@@ -76,6 +77,8 @@
 		A81F051918A8E09C00300AA7 /* NotificationMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacro.h; sourceTree = "<group>"; };
 		A81F051A18A8E0B200300AA7 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
 		A81F051B18A8E0DA00300AA7 /* VendorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorMacro.h; sourceTree = "<group>"; };
+		A81F052218A8E5FC00300AA7 /* YGPropertyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGPropertyMapper.h; sourceTree = "<group>"; };
+		A81F052318A8E5FC00300AA7 /* YGPropertyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPropertyMapper.m; sourceTree = "<group>"; };
 		A8F764FB18A61F3E006F2BFA /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		A8F7651618A626B3006F2BFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A8F7651818A626C3006F2BFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -251,6 +254,7 @@
 		A81F051F18A8E17F00300AA7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9D96498218881C1800E5E15E /* main.m */,
 				9D96497E18881C1800E5E15E /* CodeBo-Info.plist */,
 				9D96498418881C1800E5E15E /* CodeBo-Prefix.pch */,
 				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
@@ -262,6 +266,8 @@
 		A81F052118A8E1B100300AA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A81F052218A8E5FC00300AA7 /* YGPropertyMapper.h */,
+				A81F052318A8E5FC00300AA7 /* YGPropertyMapper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -269,7 +275,6 @@
 		A88E0AF818A8DF1200ACE46A /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				9D96498218881C1800E5E15E /* main.m */,
 				9D96498518881C1800E5E15E /* YGAppDelegate.h */,
 				9D96498618881C1800E5E15E /* YGAppDelegate.m */,
 			);
@@ -414,6 +419,7 @@
 				9D96498718881C1800E5E15E /* YGAppDelegate.m in Sources */,
 				9D96498D18881C1800E5E15E /* YGViewController.m in Sources */,
 				9D6A95D318A7284000CCF703 /* Reachability.m in Sources */,
+				A81F052418A8E5FC00300AA7 /* YGPropertyMapper.m in Sources */,
 				9D6A95E318A775A800CCF703 /* YGWeibo.m in Sources */,
 				9D96498318881C1800E5E15E /* main.m in Sources */,
 			);

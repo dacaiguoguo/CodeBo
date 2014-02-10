@@ -8,7 +8,8 @@
 
 #import "YGAppDelegate.h"
 #import "Reachability.h"
-#import "KZPropertyMapper.h"
+#import "YGPropertyMapper.h"
+#import "YGWeibo.h"
 
 @implementation YGAppDelegate
 
@@ -24,7 +25,7 @@
     [defaultUser registerDefaults:dic];
 //    [defaultUser setObject:@"woeo" forKey:@"wbtoken"];
     [defaultUser synchronize];
-    NSLog(@"%@",[defaultUser objectForKey:@"wbtoken"]);
+    LVLog(@"%@",[defaultUser objectForKey:@"wbtoken"]);
     
     NSURL *weiboUrl = [[NSURL alloc] initWithScheme:@"https" host:@"api.weibo.com" path:@"/2/statuses/friends_timeline.json?access_token=2.00zg7wFCYb_w7C2ef95203f3MLznRB"];
     NSURLRequest *webRequest = [NSURLRequest requestWithURL:weiboUrl];
@@ -36,7 +37,10 @@
                 id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                 //update ui
                 LVLog(@"%@",jsonObj);
-                
+                YGWeiboFriendsTimeline *aWeibo = [YGWeiboFriendsTimeline new];
+                [KZPropertyMapper mapValuesFrom:jsonObj toInstance:aWeibo];
+                LVLog(@"%@",jsonObj);
+
                 
             });
         }

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YGPropertyMapper.h"
 
 typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
 {
@@ -17,8 +18,12 @@ typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
 };
 
 
+@protocol getMap <NSObject>
+- (NSDictionary *)getMap;
+@end
+
 @class WeiboVisible;
-@interface YGWeibo : NSObject
+@interface YGWeibo : NSObject<getMap>
 @property (strong, nonatomic) NSString *created_at;//	string	微博创建时间
 @property (assign) int weiboId;//	int64	微博ID
 @property (assign) int mid;//mid	int64	微博MID
@@ -41,11 +46,15 @@ typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
 @property (assign) int attitudes_count;//	int	表态数
 @property (strong, nonatomic) WeiboVisible* visible;//	object	微博的可见性及指定可见分组信息。该object中type取值，0：普通微博，1：私密微博，3：指定分组微博，4：密友微博；list_id为分组的组号
 @property (strong, nonatomic) NSArray* pic_urls;	//object;//	微博配图地址。多图时返回多图链接。无配图返回“[]”
-@property (strong, nonatomic) NSArray*ad;//	object array	微博流内的推广微博ID
 @end
 
-@interface WeiboVisible : NSObject
+@interface WeiboVisible : NSObject<getMap>
 @property (assign) WeiboVisibleStatusType comments_count;//	int	评论数
 @property (assign) int list_id;
+@end
+
+@interface YGWeiboFriendsTimeline : NSObject<getMap>
+@property (strong, nonatomic) NSArray*ad;//	object array	微博流内的推广微博ID
+@property (strong, nonatomic) NSArray*statuses;//	object array	微博
 @end
 
