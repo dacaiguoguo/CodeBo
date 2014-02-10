@@ -72,6 +72,10 @@
 		9D9649AD18881C4300E5E15E /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		9D9649AE18881C4300E5E15E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		A3D2AE1FAF514E11B4FD3165 /* libPods-CodeBo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81F051718A8E06E00300AA7 /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
+		A81F051918A8E09C00300AA7 /* NotificationMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacro.h; sourceTree = "<group>"; };
+		A81F051A18A8E0B200300AA7 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
+		A81F051B18A8E0DA00300AA7 /* VendorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorMacro.h; sourceTree = "<group>"; };
 		A8F764FB18A61F3E006F2BFA /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		A8F7651618A626B3006F2BFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A8F7651818A626C3006F2BFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -157,21 +161,14 @@
 		9D96497C18881C1800E5E15E /* CodeBo */ = {
 			isa = PBXGroup;
 			children = (
-				9D96498518881C1800E5E15E /* YGAppDelegate.h */,
-				9D96498618881C1800E5E15E /* YGAppDelegate.m */,
-				9D6A95E118A775A800CCF703 /* YGWeibo.h */,
-				9D6A95E218A775A800CCF703 /* YGWeibo.m */,
-				9D96497E18881C1800E5E15E /* CodeBo-Info.plist */,
-				9D96498418881C1800E5E15E /* CodeBo-Prefix.pch */,
-				9D96498E18881C1800E5E15E /* Images.xcassets */,
-				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
-				9D96498218881C1800E5E15E /* main.m */,
-				9D96498818881C1800E5E15E /* Main.storyboard */,
-				9D6A95D018A7284000CCF703 /* Reachability */,
-				9D9649AB18881C4300E5E15E /* libWeiboSDK */,
-				A8F764FB18A61F3E006F2BFA /* readme.md */,
-				9D96498B18881C1800E5E15E /* YGViewController.h */,
-				9D96498C18881C1800E5E15E /* YGViewController.m */,
+				A88E0AF818A8DF1200ACE46A /* AppDelegate */,
+				A81F051E18A8E16800300AA7 /* General */,
+				A81F052118A8E1B100300AA7 /* Helpers */,
+				A81F051818A8E07400300AA7 /* Macro */,
+				A81F051618A8E03700300AA7 /* Models */,
+				A81F051F18A8E17F00300AA7 /* Other */,
+				A81F051D18A8E14A00300AA7 /* Resources */,
+				A81F051C18A8E10400300AA7 /* Vendors */,
 			);
 			path = CodeBo;
 			sourceTree = "<group>";
@@ -202,6 +199,81 @@
 				9D9649AE18881C4300E5E15E /* WeiboSDK.h */,
 			);
 			path = libWeiboSDK;
+			sourceTree = "<group>";
+		};
+		A81F051618A8E03700300AA7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D6A95E118A775A800CCF703 /* YGWeibo.h */,
+				9D6A95E218A775A800CCF703 /* YGWeibo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A81F051818A8E07400300AA7 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				A81F051718A8E06E00300AA7 /* AppMacro.h */,
+				A81F051918A8E09C00300AA7 /* NotificationMacro.h */,
+				A81F051A18A8E0B200300AA7 /* UtilsMacro.h */,
+				A81F051B18A8E0DA00300AA7 /* VendorMacro.h */,
+			);
+			name = Macro;
+			sourceTree = "<group>";
+		};
+		A81F051C18A8E10400300AA7 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				9D6A95D018A7284000CCF703 /* Reachability */,
+				9D9649AB18881C4300E5E15E /* libWeiboSDK */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		A81F051D18A8E14A00300AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D96498818881C1800E5E15E /* Main.storyboard */,
+				9D96498E18881C1800E5E15E /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A81F051E18A8E16800300AA7 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9D96498B18881C1800E5E15E /* YGViewController.h */,
+				9D96498C18881C1800E5E15E /* YGViewController.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		A81F051F18A8E17F00300AA7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9D96497E18881C1800E5E15E /* CodeBo-Info.plist */,
+				9D96498418881C1800E5E15E /* CodeBo-Prefix.pch */,
+				9D96497F18881C1800E5E15E /* InfoPlist.strings */,
+				A8F764FB18A61F3E006F2BFA /* readme.md */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		A81F052118A8E1B100300AA7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		A88E0AF818A8DF1200ACE46A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9D96498218881C1800E5E15E /* main.m */,
+				9D96498518881C1800E5E15E /* YGAppDelegate.h */,
+				9D96498618881C1800E5E15E /* YGAppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

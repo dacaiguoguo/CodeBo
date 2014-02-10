@@ -19,7 +19,13 @@
     self.wbtoken = @"2.00zg7wFCYb_w7C2ef95203f3MLznRB";
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"wbtoken": self.wbtoken}];
+    NSDictionary *dic = @{@"wbtoken": self.wbtoken};
+    NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+    [defaultUser registerDefaults:dic];
+//    [defaultUser setObject:@"woeo" forKey:@"wbtoken"];
+    [defaultUser synchronize];
+    NSLog(@"%@",[defaultUser objectForKey:@"wbtoken"]);
+    
     NSURL *weiboUrl = [[NSURL alloc] initWithScheme:@"https" host:@"api.weibo.com" path:@"/2/statuses/friends_timeline.json?access_token=2.00zg7wFCYb_w7C2ef95203f3MLznRB"];
     NSURLRequest *webRequest = [NSURLRequest requestWithURL:weiboUrl];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
