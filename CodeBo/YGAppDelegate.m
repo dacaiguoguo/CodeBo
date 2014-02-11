@@ -8,6 +8,8 @@
 
 #import "YGAppDelegate.h"
 #import "Reachability.h"
+#import "YGPropertyMapper.h"
+#import "YGWeibo.h"
 
 @implementation YGAppDelegate
 
@@ -18,17 +20,32 @@
     self.wbtoken = @"2.00zg7wFCYb_w7C2ef95203f3MLznRB";
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"wbtoken": self.wbtoken}];
-    self.weiboNetworkEngine = [[MKNetworkEngine alloc] initWithHostName:@"api.weibo.com" apiPath:@"2/statuses" customHeaderFields:nil];
-    [self.weiboNetworkEngine useCache];
-    MKNetworkOperation *op =  [self.weiboNetworkEngine operationWithPath:@"friends_timeline.json" params:@{@"access_token": self.wbtoken} httpMethod:@"GET" ssl:YES];
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-        LVLog(@"dacaiguoguo:\n%s\n%@",__func__,completedOperation.responseString);
+    NSDictionary *dic = @{@"wbtoken": self.wbtoken};
+    NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+    [defaultUser registerDefaults:dic];
+//    [defaultUser setObject:@"woeo" forKey:@"wbtoken"];
+    [defaultUser synchronize];
+    LVLog(@"%@",[defaultUser objectForKey:@"wbtoken"]);
+    
+    NSURL *weiboUrl = [[NSURL alloc] initWithScheme:@"https" host:@"api.weibo.com" path:@"/2/statuses/friends_timeline.json?access_token=2.00zg7wFCYb_w7C2ef95203f3MLznRB"];
+    NSURLRequest *webRequest = [NSURLRequest requestWithURL:weiboUrl];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    NSURLSessionDataTask *downloadTask = [session dataTaskWithRequest:webRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                //update ui
+                LVLog(@"%@",jsonObj);
+                YGWeiboFriendsTimeline *aWeibo = [YGWeiboFriendsTimeline new];
+                [KZPropertyMapper mapValuesFrom:jsonObj toInstance:aWeibo];
+                LVLog(@"%@",jsonObj);
 
-    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
-        
+                
+            });
+        }
     }];
-    [self.weiboNetworkEngine enqueueOperation:op];
+    [downloadTask resume];
     return YES;
 }
 
