@@ -3,6 +3,9 @@
 
 target "CodeBo" do
    pod 'KZPropertyMapper', '~> 2.0'
+   pod 'KZPropertyMapper', '~> 2.0'
+   pod 'UIView-Category', :git => 'https://github.com/dacaiguoguo/UIView-Category.git'
+
 end
 
 target "CodeBoTests" do

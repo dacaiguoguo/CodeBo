@@ -1,0 +1,17 @@
+PODS:
+  - KZPropertyMapper (2.0)
+  - UIView-Category (1.0.1)
+
+DEPENDENCIES:
+  - KZPropertyMapper (~> 2.0)
+  - UIView-Category (from `https://github.com/dacaiguoguo/UIView-Category.git`)
+
+EXTERNAL SOURCES:
+  UIView-Category:
+    :git: https://github.com/dacaiguoguo/UIView-Category.git
+
+SPEC CHECKSUMS:
+  KZPropertyMapper: 81c06f0c0760f42731a2b646f93802608d238872
+  UIView-Category: de1d0be03867aceda299aeae3af843c307726196
+
+COCOAPODS: 0.28.0

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YGPropertyMapper.h"
 
 typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
 {
@@ -17,7 +18,12 @@ typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
 };
 
 
+@protocol getMap <NSObject>
+- (NSDictionary *)getMap;
+@end
+
 @class WeiboVisible;
+<<<<<<< HEAD
 @interface YGWeibo : NSObject
 /**
  *  string	微博创建时间
@@ -75,6 +81,23 @@ typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
  *  string	原始图片地址，没有时不返回此字段
  */
 @property (strong, nonatomic) NSString *original_pic;
+=======
+@interface YGWeibo : NSObject<getMap>
+@property (strong, nonatomic) NSString *created_at;//	string	微博创建时间
+@property (assign) int weiboId;//	int64	微博ID
+@property (assign) int mid;//mid	int64	微博MID
+@property (strong, nonatomic) NSString *idstr;//	string	字符串型的微博ID
+@property (strong, nonatomic) NSString *text;//	string	微博信息内容
+@property (strong, nonatomic) NSString *source;//	string	微博来源
+@property (assign) BOOL favorited;//	boolean	是否已收藏，true：是，false：否
+@property (assign) BOOL truncated;//	boolean	是否被截断，true：是，false：否
+@property (strong, nonatomic) NSString *in_reply_to_status_id;//	string	（暂未支持）回复ID
+@property (strong, nonatomic) NSString *in_reply_to_user_id;//	string	（暂未支持）回复人UID
+@property (strong, nonatomic) NSString *in_reply_to_screen_name;//string;//	（暂未支持）回复人昵称
+@property (strong, nonatomic) NSString *thumbnail_pic;//	string	缩略图片地址，没有时不返回此字段
+@property (strong, nonatomic) NSString *bmiddle_pic;//	string	中等尺寸图片地址，没有时不返回此字段
+@property (strong, nonatomic) NSString *original_pic;//	string	原始图片地址，没有时不返回此字段
+>>>>>>> efd6d573508c27c02b681ab32522aa817dc314b4
 //geo	object	地理信息字段 详细
 //user	object	微博作者的用户信息字段 详细
 //retweeted_status	object	被转发的原微博信息字段，当该微博为转发微博时返回 详细
@@ -98,6 +121,7 @@ typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
  *  object	微博配图地址。多图时返回多图链接。无配图返回“[]”
  */
 @property (strong, nonatomic) NSArray* pic_urls;	//object;//	微博配图地址。多图时返回多图链接。无配图返回“[]”
+<<<<<<< HEAD
 /**
  *  object array	微博流内的推广微博ID
  */
@@ -110,6 +134,17 @@ typedef NS_ENUM(NSInteger, WeiboVisibleStatusType)
  */
 @interface WeiboVisible : NSObject
 @property (assign) WeiboVisibleStatusType type;
+=======
+@end
+
+@interface WeiboVisible : NSObject<getMap>
+@property (assign) WeiboVisibleStatusType comments_count;//	int	评论数
+>>>>>>> efd6d573508c27c02b681ab32522aa817dc314b4
 @property (assign) int list_id;
+@end
+
+@interface YGWeiboFriendsTimeline : NSObject<getMap>
+@property (strong, nonatomic) NSArray*ad;//	object array	微博流内的推广微博ID
+@property (strong, nonatomic) NSArray*statuses;//	object array	微博
 @end
 
